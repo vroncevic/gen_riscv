@@ -1,8 +1,8 @@
 <img align="right" src="https://raw.githubusercontent.com/vroncevic/gen_riscv/dev/docs/gen_riscv_logo.png" width="25%">
 
-# Generate risc-v Project
+# Generate RISC-V Project
 
-**gen_riscv** is tool for generation of risc-v project.
+**gen_riscv** is tool for generation of RISC-V project.
 
 Developed in **[python](https://www.python.org/)** code: **100%**.
 
@@ -89,7 +89,7 @@ Base flow of generation process:
 
 ### Tool structure
 
-**gen_riscv** is based on OOP:
+**gen_riscv** is based on OOP.
 
 Generator structure:
 
