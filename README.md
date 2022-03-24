@@ -4,7 +4,7 @@
 
 **gen_riscv** is tool for generation of RISC-V project.
 
-Developed in **[python](https://www.python.org/)** code: **100%**.
+Developed in **[python](https://www.python.org/)** code.
 
 The README is used to introduce the modules and provide instructions on
 how to install the modules, any machine dependencies it may have and any
@@ -32,16 +32,18 @@ other information that should be provided before the modules are installed.
 
 ![Install Python2 Package](https://github.com/vroncevic/gen_riscv/workflows/Install%20Python2%20Package%20gen_riscv/badge.svg?branch=main) ![Install Python3 Package](https://github.com/vroncevic/gen_riscv/workflows/Install%20Python3%20Package%20gen_riscv/badge.svg?branch=main)
 
-Currently there are three ways to install tool:
-* Install process based on pip
-* Install process based on setup.py (setuptools)
-* Install process based on docker mechanism
+Currently there are three ways to install tool
+
+- Install process based on pip
+- Install process based on setup.py (setuptools)
+- Install process based on docker mechanism
 
 ##### Install using pip
 
 Python package is located at **[pypi.org](https://pypi.org/project/gen-riscv/)**.
 
 You can install by using pip
+
 ```
 # python2
 pip install gen-riscv
@@ -54,6 +56,7 @@ pip3 install gen-riscv
 Navigate to release **[page](https://github.com/vroncevic/gen_riscv/releases/)** download and extract release archive.
 
 To install modules, locate and run setup.py with arguments
+
 ```
 tar xvzf gen_riscv-x.y.z.tar.gz
 cd gen_riscv-x.y.z/
@@ -77,13 +80,13 @@ You can use docker to create image/container.
 
 ### Dependencies
 
-**gen_riscv** requires next modules and libraries:
+**gen_riscv** requires next modules and libraries
 
-* [ats-utilities - Python App/Tool/Script Utilities](https://vroncevic.github.io/ats_utilities)
+- [ats-utilities - Python App/Tool/Script Utilities](https://vroncevic.github.io/ats_utilities)
 
 ### Generation flow of py module
 
-Base flow of generation process:
+Base flow of generation process
 
 ![alt tag](https://raw.githubusercontent.com/vroncevic/gen_riscv/dev/docs/gen_riscv_flow.png)
 
@@ -91,7 +94,7 @@ Base flow of generation process:
 
 **gen_riscv** is based on OOP.
 
-Generator structure:
+Generator structure
 
 ```
 
@@ -101,9 +104,10 @@ Generator structure:
 
 [![Documentation Status](https://readthedocs.org/projects/gen_riscv/badge/?version=latest)](https://gen_riscv.readthedocs.io/projects/gen_riscv/en/latest/?badge=latest)
 
-More documentation and info at:
-* [gen_riscv.readthedocs.io](https://gen_riscv.readthedocs.io/en/latest/)
-* [www.python.org](https://www.python.org/)
+More documentation and info at
+
+- [gen_riscv.readthedocs.io](https://gen_riscv.readthedocs.io/en/latest/)
+- [www.python.org](https://www.python.org/)
 
 ### Copyright and Licence
 

@@ -23,12 +23,10 @@
 import sys
 
 try:
-    from pathlib import Path
     from gen_riscv.pro.read_template import ReadTemplate
     from gen_riscv.pro.write_template import WriteTemplate
     from ats_utilities.checker import ATSChecker
     from ats_utilities.config_io.base_check import FileChecking
-    from ats_utilities.console_io.error import error_message
     from ats_utilities.console_io.verbose import verbose_message
     from ats_utilities.config_io.yaml.yaml2object import Yaml2Object
     from ats_utilities.exceptions.ats_type_error import ATSTypeError
