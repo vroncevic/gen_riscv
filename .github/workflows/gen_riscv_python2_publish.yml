@@ -1,7 +1,7 @@
 name: Install Python2 Package gen_riscv
 on:
   push:
-    branches: [ master ]
+    branches: [ main ]
     paths:
       - 'gen_riscv/**'
       - 'MANIFEST.in'
@@ -9,7 +9,7 @@ on:
       - 'setup.cfg'
       - 'setup.py'
   pull_request:
-    branches: [ master ]
+    branches: [ main ]
     paths:
       - 'gen_riscv/**'
       - 'MANIFEST.in'

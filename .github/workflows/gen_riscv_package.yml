@@ -1,12 +1,12 @@
 name: Python package gen_riscv
 on:
   push:
-    branches: [ master ]
+    branches: [ main ]
     paths:
       - 'gen_riscv/**'
       - 'setup.py'
   pull_request:
-    branches: [ master ]
+    branches: [ main ]
     paths:
       - 'gen_riscv/**'
       - 'setup.py'
