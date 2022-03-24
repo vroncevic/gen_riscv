@@ -21,11 +21,12 @@
 '''
 
 import sys
-from os.path import exists
+from os.path import exists, dirname, realpath
 
 try:
-    from pathlib import Path
+    from six import add_metaclass
     from gen_riscv.pro import RISCV
+    from ats_utilities.splash import Splash
     from ats_utilities.logging import ATSLogger
     from ats_utilities.cli.cfg_cli import CfgCLI
     from ats_utilities.cooperative import CooperativeMeta
@@ -46,6 +47,7 @@ __email__ = 'elektron.ronca@gmail.com'
 __status__ = 'Updated'
 
 
+@add_metaclass(CooperativeMeta)
 class GenRISCV(CfgCLI):
     '''
         Defined class GenRISCV with attribute(s) and method(s).
@@ -53,10 +55,10 @@ class GenRISCV(CfgCLI):
         It defines:
 
             :attributes:
-                | __metaclass__ - setting cooperative metaclasses.
                 | GEN_VERBOSE - console text indicator for process-phase.
                 | CONFIG - tool info file path.
                 | LOG - tool log file path.
+                | LOGO - logo for splash screen.
                 | OPS - list of tool options.
                 | logger - logger object API.
             :methods:
@@ -65,10 +67,10 @@ class GenRISCV(CfgCLI):
                 | __str__ - dunder method for GenRISCV.
     '''
 
-    __metaclass__ = CooperativeMeta
     GEN_VERBOSE = 'GEN_RISCV'
     CONFIG = '/conf/gen_riscv.cfg'
     LOG = '/log/gen_riscv.log'
+    LOGO = '/conf/gen_riscv.logo'
     OPS = ['-g', '--gen', '-v', '--verbose', '--version']
 
     def __init__(self, verbose=False):
@@ -79,7 +81,15 @@ class GenRISCV(CfgCLI):
             :type verbose: <bool>
             :exceptions: None
         '''
-        current_dir = Path(__file__).resolve().parent
+        current_dir = dirname(realpath(__file__))
+        gen_riscv_property = {
+            'ats_organization': 'vroncevic',
+            'ats_repository': 'gen_riscv',
+            'ats_name': 'gen_riscv',
+            'ats_logo_path': '{0}{1}'.format(current_dir, GenRISCV.LOGO),
+            'ats_use_github_infrastructure': True
+        }
+        splash = Splash(gen_riscv_property, verbose=verbose)
         base_info = '{0}{1}'.format(current_dir, GenRISCV.CONFIG)
         CfgCLI.__init__(self, base_info, verbose=verbose)
         verbose_message(GenRISCV.GEN_VERBOSE, verbose, 'init tool info')

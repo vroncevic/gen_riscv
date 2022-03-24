@@ -117,6 +117,7 @@ setup(
     install_requires=['ats-utilities'],
     package_data={
         'gen_riscv': [
+            'conf/gen_riscv.logo',
             'conf/gen_riscv.cfg',
             'conf/gen_riscv_util.cfg',
             'conf/project.yaml',
