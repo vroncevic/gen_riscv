@@ -1,11 +1,11 @@
 name: gen_riscv docker checker
 on:
   push:
-    branches: [ master ]
+    branches: [ main ]
     paths:
       - 'Dockerfile'
   pull_request:
-    branches: [ master ]
+    branches: [ main ]
     paths:
       - 'Dockerfile'
 jobs:
