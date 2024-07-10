@@ -1,28 +1,58 @@
-# Configuration file for the Sphinx documentation builder.
-#
-# For the full list of built-in configuration values, see the documentation:
-# https://www.sphinx-doc.org/en/master/usage/configuration.html
+# -*- coding: utf-8 -*-
 
-# -- Project information -----------------------------------------------------
-# https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
+'''
+Module
+    conf.py
+Copyright
+    Copyright (C) 2021 - 2024 Vladimir Roncevic <elektron.ronca@gmail.com>
+    gen_riscv is free software: you can redistribute it and/or modify it
+    under the terms of the GNU General Public License as published by the
+    Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+    gen_riscv is distributed in the hope that it will be useful, but
+    WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+    See the GNU General Public License for more details.
+    You should have received a copy of the GNU General Public License along
+    with this program. If not, see <http://www.gnu.org/licenses/>.
+Info
+    Defines properties for sphinx-doc.
+'''
 
-project = 'gen_riscv'
-copyright = '2023, Vladimir Roncevic'
-author = 'Vladimir Roncevic'
-release = 'https://github.com/vroncevic/gen_riscv/releases'
+import os
+import sys
 
-# -- General configuration ---------------------------------------------------
-# https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
+from typing import Any, List, Dict, Tuple
 
-extensions = []
+sys.path.insert(0, os.path.abspath('../../'))
 
-templates_path = ['_templates']
-exclude_patterns = []
-
-
-
-# -- Options for HTML output -------------------------------------------------
-# https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
-
-html_theme = 'classic'
-html_static_path = ['_static']
+project: str = 'gen_riscv'
+project_copyright: str = '2024, Vladimir Roncevic <elektron.ronca@gmail.com>'
+author: str = 'Vladimir Roncevic <elektron.ronca@gmail.com>'
+version: str = '1.0.0'
+release: str = 'https://github.com/vroncevic/gen_riscv/releases'
+extensions: List[str] = ['sphinx.ext.autodoc', 'sphinx.ext.viewcode']
+templates_path: List[str] = ['_templates']
+source_suffix: str = '.rst'
+master_doc: str = 'index'
+language: str = 'en'
+exclude_patterns: List[str] = []
+pygments_style: str = 'sphinx'
+html_theme: str = 'classic'
+html_static_path: List[str] = ['_static']
+htmlhelp_basename: str = 'gen_riscvdoc'
+latex_elements: Dict[Any, Any] = {}
+latex_documents: List[Tuple[Any, ...]] = [(
+    master_doc, 'gen_riscv.tex', 'gen_riscv Documentation',
+    'Vladimir Roncevic \\textless{}elektron.ronca@gmail.com\\textgreater{}',
+    'manual'
+)]
+man_pages: List[Tuple[Any, ...]] = [(
+    master_doc, 'gen_riscv', 'gen_riscv Documentation', [author], 1
+)]
+texinfo_documents: List[Tuple[Any, ...]] = [(
+    master_doc, 'gen_riscv', 'gen_riscv Documentation', author, 'gen_riscv',
+    'One line description of project.', 'Miscellaneous'
+)]
+epub_title: str = project
+epub_exclude_files: List[str] = ['search.html']
