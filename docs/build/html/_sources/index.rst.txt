@@ -126,7 +126,7 @@ Copyright and licence
 .. |License: Apache 2.0| image:: https://img.shields.io/badge/License-Apache%202.0-blue.svg
    :target: https://opensource.org/licenses/Apache-2.0
 
-Copyright (C) 2021 - 2024 by `vroncevic.github.io/gen_riscv <https://vroncevic.github.io/gen_riscv>`_
+Copyright (C) 2021 - 2026 by `vroncevic.github.io/gen_riscv <https://vroncevic.github.io/gen_riscv>`_
 
 **gen_riscv** is free software; you can redistribute it and/or modify
 it under the same terms as Python itself, either Python version 3.x or,

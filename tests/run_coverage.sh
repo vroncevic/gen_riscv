@@ -9,10 +9,11 @@
 
 rm -rf htmlcov gen_riscv_coverage.xml gen_riscv_coverage.json .coverage
 rm -rf mypro
-ats_coverage_run.py -n gen_riscv -p ../README.md
-rm -rf mypro
 python3 -m coverage run -m --source=../gen_riscv unittest discover -s ./ -p '*_test.py' -vvv
 python3 -m coverage html -d htmlcov
 python3 -m coverage xml -o gen_riscv_coverage.xml 
 python3 -m coverage json -o gen_riscv_coverage.json
 python3 -m coverage report --format=markdown -m
+python3 ats_coverage.py -n gen_riscv
+rm htmlcov/.gitignore
+echo "Done"
