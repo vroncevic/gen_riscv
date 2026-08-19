@@ -23,6 +23,7 @@ from __future__ import annotations
 
 from collections.abc import Mapping
 
+from ats_utilities.exceptions import ATSValueError, ATSTypeError
 from ats_utilities.validation.check_type import istype
 from ats_utilities.validation.check_value import not_none
 
@@ -47,6 +48,7 @@ class GenRiscvBundleOptionsValidator:
 
             :methods:
                 | validate - Validates the gen_riscv bundle options.
+                | is_valid - Checks if the gen_riscv bundle options is valid.
     '''
 
     @classmethod
@@ -73,3 +75,18 @@ class GenRiscvBundleOptionsValidator:
             attribute = options.get(attr_name)
 
             istype(attribute, expected_type, ctx, msg_attr_name_istype)
+
+    @classmethod
+    def is_valid(cls, genriscvbundleoptions: GenRiscvBundleOptions) -> bool:
+        '''
+            Checks if the genriscvbundleoptions is valid.
+
+            :param genriscvbundleoptions: The genriscvbundleoptions to be checked.
+            :return: True if valid, False otherwise.
+        '''
+        try:
+            cls.validate(genriscvbundleoptions)
+            return True
+
+        except (ATSValueError, ATSTypeError):
+            return False

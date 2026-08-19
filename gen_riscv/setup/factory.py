@@ -63,6 +63,7 @@ class GenRiscvBundleFactory:
                 | _info_file - Path to the gen_riscv info file.
             :methods:
                 | create_bundle - Creates the gen_riscv bundle with optional pre-configured options.
+                | get_version - Returns the factory version.
     '''
 
     _info_file: str = 'gen_riscv/infrastructure/config/gen_riscv.cfg'
@@ -129,3 +130,13 @@ class GenRiscvBundleFactory:
                 cli=cli
             )
         )
+
+    @classmethod
+    def get_version(cls) -> str:
+        '''
+            Returns the factory version.
+
+            :return: The factory version.
+            :exceptions: None.
+        '''
+        return __version__
