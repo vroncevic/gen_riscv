@@ -7,7 +7,16 @@ Subpackages
 .. toctree::
    :maxdepth: 4
 
-   gen_riscv.pro
+   gen_riscv.core
+   gen_riscv.setup
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 4
+
+   gen_riscv.engine
 
 Module contents
 ---------------

@@ -5,3 +5,4 @@ gen_riscv
    :maxdepth: 4
 
    gen_riscv
+   main
