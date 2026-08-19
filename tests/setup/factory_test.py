@@ -32,4 +32,4 @@ class TestGenRiscvBundleFactory(unittest.TestCase):
             GenRiscvBundleFactory.create_bundle(options)
 
     def test_get_version(self) -> None:
-        self.assertEqual(GenRiscvBundleFactory.get_version(), '1.0.5')
+        self.assertEqual(GenRiscvBundleFactory.get_version(), '1.0.3')
